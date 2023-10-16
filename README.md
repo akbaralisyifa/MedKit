@@ -1,4 +1,4 @@
-#Mini Project React ( Alterra Academy - React Js - E )
+# Mini Project React ( Alterra Academy - React Js - E )
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

@@ -5,3 +5,11 @@
 * {
   outline: none;
 }
+
+.heroImage {
+  margin-top: -144px;
+}
+
+.featureImage {
+  width: 557px;
+}

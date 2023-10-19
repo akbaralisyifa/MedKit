@@ -107,6 +107,7 @@ export default {
         scColor: '#79AC78',
         trColor: '#F9FCF7',
         gryColor: '#D9D9D9',
+        borderGray: '#5E5C5C',
       },
     },
   },

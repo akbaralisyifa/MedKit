@@ -1,10 +1,13 @@
 import NavabarUser from '../../Components/Navbar/NavbarUser';
+import AiHeader from '../../Components/User/AiHeader';
+import Footer from './Footer';
 
 const AiMedicine = () => {
   return (
     <>
       <NavabarUser />
-      <h1>Bagian Ai Medicine</h1>
+      <AiHeader />
+      <Footer />
     </>
   );
 };

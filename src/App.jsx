@@ -6,6 +6,7 @@ import PageNotFound from './Pages/PageNotFound';
 import Product from './Pages/User/Product';
 import AiMedicine from './Pages/User/Ai_Medicine';
 import Cart from './Pages/User/Cart';
+import Checkout from './Pages/User/Checkout';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path="/products" element={<Product />} />
         <Route path="/ai_medicine" element={<AiMedicine />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/cart/checkout" element={() => {}} />
+        <Route path="/cart/checkout" element={<Checkout />} />
 
         {/* Page Not Found */}
         <Route path="*" element={<PageNotFound />} />

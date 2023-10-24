@@ -7,6 +7,9 @@ import Product from './Pages/User/Product';
 import AiMedicine from './Pages/User/Ai_Medicine';
 import Cart from './Pages/User/Cart';
 import Checkout from './Pages/User/Checkout';
+import Dashboard from './Pages/Admin/Dashboard';
+import OrderList from './Pages/Admin/OrderList';
+import Products from './Pages/Admin/Products';
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
       <Routes>
         {/* Bagian Admin */}
         <Route path="/admin" element={<LoginAdmin />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/admin/products" element={<Products />} />
+        <Route path="/admin/orderList" element={<OrderList />} />
 
         {/* Bagian User */}
         <Route path="/login" element={<Login />} />

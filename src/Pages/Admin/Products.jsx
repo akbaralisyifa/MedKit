@@ -1,15 +1,15 @@
-import DashboardHeader from '../../Components/Admin/DashboardHeader';
+import AdminProductsHeader from '../../Components/Admin/AdminProductHeader';
 import NavbarAdmin from '../../Components/Navbar/NavbarAdmin';
 
-const Dashboard = () => {
+const Products = () => {
   return (
     <div className="flex">
       <NavbarAdmin />
       <div className="w-full bg-trColor">
-        <DashboardHeader />
+        <AdminProductsHeader />
       </div>
     </div>
   );
 };
 
-export default Dashboard;
+export default Products;

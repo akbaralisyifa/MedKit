@@ -10,8 +10,16 @@ import Checkout from './Pages/User/Checkout';
 import Dashboard from './Pages/Admin/Dashboard';
 import OrderList from './Pages/Admin/OrderList';
 import Products from './Pages/Admin/Products';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchDataAsyc } from './Store/ProductSlice';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchDataAsyc());
+  }, []);
   return (
     <>
       <Routes>

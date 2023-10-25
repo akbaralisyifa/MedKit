@@ -1,4 +1,4 @@
-import AdminProductsHeader from '../../Components/Admin/AdminProductHeader';
+import AdminProductsHeader from '../../Components/Admin/ProductHeader';
 import NavbarAdmin from '../../Components/Navbar/NavbarAdmin';
 
 const Products = () => {

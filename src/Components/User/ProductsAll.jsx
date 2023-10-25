@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import OrganismProducts from './Organism/OrganismProducts';
 import { useEffect } from 'react';
-import { fetchData } from '../../Store/ProductSlice';
+import { fetchDataAsyc } from '../../Store/ProductSlice';
 
 const ProductsAll = () => {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ const ProductsAll = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchData());
+    // dispatch(fetchDataAsyc());
   }, [dispatch]);
 
   const action = () => {

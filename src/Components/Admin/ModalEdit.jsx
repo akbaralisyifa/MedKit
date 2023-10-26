@@ -5,11 +5,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import AtomInputCreate from './Atom/AtomInputCreate';
 import AtomTextarea from './Atom/AtomTextarea';
 import { updateDataAsyc } from '../../Store/ProductSlice';
-import { updateData } from '../../Store/ProductSlice';
 
 export default function ModalEdit({ children, data }) {
   const [opened, { open, close }] = useDisclosure(false);
-  //   const value = useSelector((state) => state.products.updateData);
 
   const initialValue = {
     id: data.id,
@@ -49,7 +47,7 @@ export default function ModalEdit({ children, data }) {
   return (
     <>
       <Modal opened={opened} onClose={close} title="Authentication" size={'xl'}>
-        <h1 className="text-center font-unicaOne uppercase font-semibold text-3xl">Create Product</h1>
+        <h1 className="text-center font-unicaOne uppercase font-semibold text-3xl">Update Product</h1>
         <form onSubmit={handleUpdate} className="mt-10">
           <div className="flex">
             <div className="w-1/2 mr-1">
@@ -72,7 +70,7 @@ export default function ModalEdit({ children, data }) {
               <AtomInputCreate handleChange={handleChange} data={value?.kategori} label="Produk Kategori" name="kategori" type="text" />
               <AtomInputCreate handleChange={handleChange} data={value?.dosis} label="Dosis Produk" name="dosis" type="text" />
               <AtomTextarea handleChange={handleChange} data={value?.deskripsi} label="Deskripsi Product" name="deskripsi" style="h-36" />
-              <AtomTextarea handleChange={handleChange} data={value?.komposisi} label="Komposis" name="komposis" style="h-32" />
+              <AtomTextarea handleChange={handleChange} data={value?.komposisi} label="Komposisi" name="komposisi" style="h-32" />
             </div>
           </div>
 

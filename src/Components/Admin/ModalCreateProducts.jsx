@@ -30,7 +30,7 @@ const ModalCreateProducts = (props) => {
             <AtomInputCreate handleChange={handleChange} data={data.kategori} label="Produk Kategori" name="kategori" type="text" />
             <AtomInputCreate handleChange={handleChange} data={data.dosis} label="Dosis Produk" name="dosis" type="text" />
             <AtomTextarea handleChange={handleChange} data={data.deskripsi} label="Deskripsi Product" name="deskripsi" style="h-36" />
-            <AtomTextarea handleChange={handleChange} data={data.komposisi} label="Komposis" name="komposis" style="h-32" />
+            <AtomTextarea handleChange={handleChange} data={data.komposisi} label="Komposisi" name="komposisi" style="h-32" />
           </div>
         </div>
 

@@ -1,5 +1,6 @@
 const OrganismDashboardNotif = (props) => {
   const { icon, text, item } = props;
+
   return (
     <div className="bg-white rounded-md shadow-md w-1/5 py-4 px-3">
       <div className="flex">

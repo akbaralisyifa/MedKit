@@ -25,9 +25,6 @@ export const ProductSlice = createSlice({
     deleteData: (state, action) => {
       state.data = state.data.filter((product) => product.id !== action.payload);
     },
-    setEditProduct: (state, action) => {
-      state.updateData = action.payload; // Aksi ini akan mengatur produk yang akan diedit
-    },
   },
 });
 

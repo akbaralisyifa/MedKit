@@ -2,7 +2,6 @@ import AtomButtonCreate from './Atom/AtomButtonCreate';
 import AtomTextHeader from './Atom/AtomTextHeader';
 import OrganismThead from './Organism/OrganismThead';
 
-import img from '../../assets/img/1.jpg';
 import OrganismButtonAction from './Organism/OrganismButtonAction';
 import ModalCreateProducts from './ModalCreateProducts';
 
@@ -10,7 +9,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { createDataAsyc, updateDataAsyc, setEditProduct } from '../../Store/ProductSlice';
+import { createDataAsyc, deleteDataAsyc } from '../../Store/ProductSlice';
 
 const AdminProductsHeader = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -33,8 +32,6 @@ const AdminProductsHeader = () => {
 
   const products = useSelector((state) => state.products.data);
 
-  const editProduct = useSelector((state) => state.products.updateData);
-
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -53,13 +50,13 @@ const AdminProductsHeader = () => {
 
     dispatch(createDataAsyc(data));
     setData(initialValue);
+    alert('Data Berhasil Di Tambah !');
   };
 
-  const handleUpdate = (e) => {
-    e.preventDefault();
-
-    if (editProduct) {
-      dispatch(updateDataAsyc(editProduct));
+  const handleDelete = (productId) => {
+    const confirm = window.confirm('Yakin ingin menghapus ?');
+    if (confirm) {
+      dispatch(deleteDataAsyc(productId));
     }
   };
 
@@ -97,7 +94,7 @@ const AdminProductsHeader = () => {
               </td>
               <td className="py-5  w-96">
                 <div className="flex justify-center w-96 items-center">
-                  <OrganismButtonAction handleUpdate={handleUpdate} data={val} />
+                  <OrganismButtonAction handleDelete={() => handleDelete(val.id)} data={val} />
                 </div>
               </td>
             </tr>

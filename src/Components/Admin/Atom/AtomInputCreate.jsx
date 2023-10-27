@@ -1,5 +1,5 @@
 const AtomInputCreate = (props) => {
-  const { label, name, type, style, handleChange, data } = props;
+  const { label, name, type, style, handleChange, data, placeholder } = props;
   return (
     <>
       <div className="flex flex-col">
@@ -12,7 +12,7 @@ const AtomInputCreate = (props) => {
           name={name}
           value={data || ''}
           onChange={handleChange}
-          placeholder={label}
+          placeholder={placeholder}
           className={`${style} py-2 px-2 border border-gryColor rounded-md font-firaSans placeholder:font-light mb-5 focus:outline focus:outline-1 focus:outline-scColor`}
         />
       </div>

@@ -11,26 +11,18 @@ const ModalCreateProducts = (props) => {
       <form onSubmit={handleCreate} className="mt-10">
         <div className="flex">
           <div className="w-1/2 mr-1">
-            <AtomInputCreate handleChange={handleChange} data={data.name} label="Nama Produk" name="name" type="text" />
-            <AtomInputCreate handleChange={handleChange} data={data.harga} label="Harga" name="harga" type="text" />
-
-            <AtomInputCreate
-              handleChange={handleChange}
-              data={data.image}
-              label="Gambar"
-              name="image"
-              type="file"
-              style="file:bg-gryColor file:cursor-pointer file:py-1 file:px-7 file:rounded-md file:border file:font-firaSans file:text-slate-600 file:hover:text-black file:border-gryColor "
-            />
-            <AtomInputCreate handleChange={handleChange} data={data.noIzin} label="Nomor Izin" name="noIzin" type="text" />
-            <AtomInputCreate handleChange={handleChange} data={data.stok} label="Jumlah Stok" name="stok" type="number" />
-            <AtomInputCreate handleChange={handleChange} data={data.golonganObat} label="Golongan Obat" name="golonganObat" type="text" />
+            <AtomInputCreate handleChange={handleChange} data={data.name} placeholder="Input Nama Produk" label="Nama Produk" name="name" type="text" />
+            <AtomInputCreate handleChange={handleChange} data={data.harga} placeholder="Input Harga Produk" label="Harga" name="harga" type="text" />
+            <AtomInputCreate handleChange={handleChange} data={data.image} placeholder="Input Link Gambar Produk" label="Gambar" name="image" type="text" />
+            <AtomInputCreate handleChange={handleChange} data={data.noIzin} placeholder="Input Nomor Izin" label="Nomor Izin" name="noIzin" type="text" />
+            <AtomInputCreate handleChange={handleChange} data={data.stok} placeholder="Input Jumlah Stok" label="Jumlah Stok" name="stok" type="number" />
+            <AtomInputCreate handleChange={handleChange} data={data.golonganObat} placeholder="Input Golongan Obat" label="Golongan Obat" name="golonganObat" type="text" />
           </div>
           <div className="w-1/2">
-            <AtomInputCreate handleChange={handleChange} data={data.kategori} label="Produk Kategori" name="kategori" type="text" />
-            <AtomInputCreate handleChange={handleChange} data={data.dosis} label="Dosis Produk" name="dosis" type="text" />
-            <AtomTextarea handleChange={handleChange} data={data.deskripsi} label="Deskripsi Product" name="deskripsi" style="h-36" />
-            <AtomTextarea handleChange={handleChange} data={data.komposisi} label="Komposisi" name="komposisi" style="h-32" />
+            <AtomInputCreate handleChange={handleChange} data={data.kategori} placeholder="Input Kategori Produk" label="Produk Kategori" name="kategori" type="text" />
+            <AtomInputCreate handleChange={handleChange} data={data.dosis} placeholder="Input Dosis Produk" label="Dosis Produk" name="dosis" type="text" />
+            <AtomTextarea handleChange={handleChange} data={data.deskripsi} placeholder="Input Deskripsi Produk" label="Deskripsi Product" name="deskripsi" style="h-36" />
+            <AtomTextarea handleChange={handleChange} data={data.komposisi} placeholder="Input Komosisi" label="Komposisi" name="komposisi" style="h-32" />
           </div>
         </div>
 

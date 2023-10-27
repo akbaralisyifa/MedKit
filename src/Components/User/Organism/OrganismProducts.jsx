@@ -10,7 +10,7 @@ const OrganismProducts = ({ datas }) => {
       {datas.map((data, index) => (
         <div key={index} className="lg:w-[31.5%] md:w-1/2 w-full bg-white shadow-md rounded-xl overflow-hidden">
           <div className="relative">
-            <img src={data.image} alt="" className="inline-block w-full hover:filter hover:blur-sm transition ease-in-out" />
+            <img src={data.image} alt="" className="inline-block w-full h-80 hover:filter hover:blur-sm transition ease-in-out" />
 
             <AtomButtonDetail data={data} />
           </div>

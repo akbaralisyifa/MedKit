@@ -51,18 +51,18 @@ export default function ModalEdit({ children, data }) {
         <form onSubmit={handleUpdate} className="mt-10">
           <div className="flex">
             <div className="w-1/2 mr-1">
-              <AtomInputCreate handleChange={handleChange} data={data.name} placeholder="Input Nama Produk" label="Nama Produk" name="name" type="text" />
-              <AtomInputCreate handleChange={handleChange} data={data.harga} placeholder="Input Harga Produk" label="Harga" name="harga" type="text" />
-              <AtomInputCreate handleChange={handleChange} data={data.image} placeholder="Input Link Gambar Produk" label="Gambar" name="image" type="text" />
-              <AtomInputCreate handleChange={handleChange} data={data.noIzin} placeholder="Input Nomor Izin" label="Nomor Izin" name="noIzin" type="text" />
-              <AtomInputCreate handleChange={handleChange} data={data.stok} placeholder="Input Jumlah Stok" label="Jumlah Stok" name="stok" type="number" />
-              <AtomInputCreate handleChange={handleChange} data={data.golonganObat} placeholder="Input Golongan Obat" label="Golongan Obat" name="golonganObat" type="text" />
+              <AtomInputCreate handleChange={handleChange} data={value.name} placeholder="Input Nama Produk" label="Nama Produk" name="name" type="text" />
+              <AtomInputCreate handleChange={handleChange} data={value.harga} placeholder="Input Harga Produk" label="Harga" name="harga" type="text" />
+              <AtomInputCreate handleChange={handleChange} data={value.image} placeholder="Input Link Gambar Produk" label="Gambar" name="image" type="text" />
+              <AtomInputCreate handleChange={handleChange} data={value.noIzin} placeholder="Input Nomor Izin" label="Nomor Izin" name="noIzin" type="text" />
+              <AtomInputCreate handleChange={handleChange} data={value.stok} placeholder="Input Jumlah Stok" label="Jumlah Stok" name="stok" type="number" />
+              <AtomInputCreate handleChange={handleChange} data={value.golonganObat} placeholder="Input Golongan Obat" label="Golongan Obat" name="golonganObat" type="text" />
             </div>
             <div className="w-1/2">
-              <AtomInputCreate handleChange={handleChange} data={data.kategori} placeholder="Input Kategori Produk" label="Produk Kategori" name="kategori" type="text" />
-              <AtomInputCreate handleChange={handleChange} data={data.dosis} placeholder="Input Dosis Produk" label="Dosis Produk" name="dosis" type="text" />
-              <AtomTextarea handleChange={handleChange} data={data.deskripsi} placeholder="Input Deskripsi Produk" label="Deskripsi Product" name="deskripsi" style="h-36" />
-              <AtomTextarea handleChange={handleChange} data={data.komposisi} placeholder="Input Komosisi" label="Komposisi" name="komposisi" style="h-32" />
+              <AtomInputCreate handleChange={handleChange} data={value.kategori} placeholder="Input Kategori Produk" label="Produk Kategori" name="kategori" type="text" />
+              <AtomInputCreate handleChange={handleChange} data={value.dosis} placeholder="Input Dosis Produk" label="Dosis Produk" name="dosis" type="text" />
+              <AtomTextarea handleChange={handleChange} data={value.deskripsi} placeholder="Input Deskripsi Produk" label="Deskripsi Product" name="deskripsi" style="h-36" />
+              <AtomTextarea handleChange={handleChange} data={value.komposisi} placeholder="Input Komosisi" label="Komposisi" name="komposisi" style="h-32" />
             </div>
           </div>
 

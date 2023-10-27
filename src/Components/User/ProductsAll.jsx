@@ -1,21 +1,9 @@
-import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import OrganismProducts from './Organism/OrganismProducts';
-import { useEffect } from 'react';
-import { fetchDataAsyc } from '../../Store/ProductSlice';
 
 const ProductsAll = () => {
-  const navigate = useNavigate();
   const datas = useSelector((state) => state.products.data);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    // dispatch(fetchDataAsyc());
-  }, [dispatch]);
-
-  const action = () => {
-    navigate('/products/detail');
-  };
 
   return (
     <div className="container mt-20">
@@ -27,7 +15,7 @@ const ProductsAll = () => {
         <input className="border-2 border-gray-500 w-96 h-12 px-5 py-3 placeholder:font-firaSans placeholder:font-light font-firaSans" type="search" placeholder="Search..." />
       </div>
       <div className="mt-16 flex gap-10 flex-wrap justify-center">
-        <OrganismProducts datas={datas} action={action} />
+        <OrganismProducts datas={datas} />
       </div>
     </div>
   );

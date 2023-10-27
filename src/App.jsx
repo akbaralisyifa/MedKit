@@ -13,6 +13,7 @@ import Products from './Pages/Admin/Products';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchDataAsyc } from './Store/ProductSlice';
+import DetailProduct from './Pages/User/DetailProduct';
 
 function App() {
   const dispatch = useDispatch();
@@ -36,6 +37,7 @@ function App() {
         <Route path="/ai_medicine" element={<AiMedicine />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/cart/checkout" element={<Checkout />} />
+        <Route path="/products/:nama" element={<DetailProduct />} />
 
         {/* Page Not Found */}
         <Route path="*" element={<PageNotFound />} />

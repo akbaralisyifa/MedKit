@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux';
 
 const DashboardHeader = () => {
   const totalProduct = useSelector((state) => state.products.data);
+  const totalUsers = useSelector((state) => state.users.data);
 
   return (
     <div className="p-10">
@@ -16,7 +17,7 @@ const DashboardHeader = () => {
       <div className="mt-24 flex justify-evenly">
         <OrganismDashboardNotif text="Total Product" icon={total} item={totalProduct.length} />
         <OrganismDashboardNotif text="Pendding Order" icon={pendding} item="300" />
-        <OrganismDashboardNotif text="Registed User" icon={user} item="300" />
+        <OrganismDashboardNotif text="Registed User" icon={user} item={totalUsers.length} />
       </div>
 
       <img src={heroImg} alt="" className="mx-auto w-557 mt-32" />

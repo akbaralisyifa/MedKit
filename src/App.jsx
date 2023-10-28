@@ -13,31 +13,34 @@ import Products from './Pages/Admin/Products';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchDataAsyc } from './Store/ProductSlice';
-import DetailProduct from './Pages/User/DetailProduct';
+// import DetailProduct from './Pages/User/DetailProduct';
+import { fetchUserAsych } from './Store/UserSlice';
+import PrivateRoute from './Route/PrivateRoute';
+import PrivateRouteAdmin from './Route/PrivateRouteAdmin';
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchDataAsyc());
+    dispatch(fetchDataAsyc()), dispatch(fetchUserAsych());
   }, []);
   return (
     <>
       <Routes>
         {/* Bagian Admin */}
         <Route path="/admin" element={<LoginAdmin />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/admin/products" element={<Products />} />
-        <Route path="/admin/orderList" element={<OrderList />} />
+        <Route path="/dashboard" element={<PrivateRouteAdmin component={Dashboard} />} />
+        <Route path="/admin/products" element={<PrivateRouteAdmin component={Products} />} />
+        <Route path="/admin/orderList" element={<PrivateRouteAdmin component={OrderList} />} />
 
         {/* Bagian User */}
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Product />} />
-        <Route path="/ai_medicine" element={<AiMedicine />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/cart/checkout" element={<Checkout />} />
-        <Route path="/products/:nama" element={<DetailProduct />} />
+        <Route path="/products" element={<PrivateRoute component={Product} />} />
+        <Route path="/ai_medicine" element={<PrivateRoute component={AiMedicine} />} />
+        <Route path="/cart" element={<PrivateRoute component={Cart} />} />
+        <Route path="/cart/checkout" element={<PrivateRoute component={Checkout} />} />
+        {/* <Route path="/products/:nama" element={<PrivateRoute component={DetailProduct} />} /> */}
 
         {/* Page Not Found */}
         <Route path="*" element={<PageNotFound />} />
